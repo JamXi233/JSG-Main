@@ -10,8 +10,9 @@
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.0/css/bootstrap.min.css">
   </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand">主页</a><span class="badge badge-pill badge-info">Beta1.4 (40)</span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">JSG主页</a>
+      <img src="https://img.shields.io/hsts/preload/jamsg.cn?label=HSTS%E7%8A%B6%E6%80%81&style=flat-square" alt="">
     </nav>
     <div class="container mt-2">
       <div class="row">
@@ -23,10 +24,7 @@
             </p>
             <div>
             <p>
-            <span class="badge badge-warning">服务器状态:<a class="badge badge-danger" href="https://docs.jamsg.cn/statuscode">Err-03</a></span>
-            </p>
-            <p>
-            <span class="badge badge-warning">Server Status:<a class="badge badge-danger" href="https://docs.jamsg.cn/statuscode">Err-03</a></span>
+            <span class="badge badge-warning">服务器状态:<a class="badge badge-success" data-toggle="modal" data-target="#status" href="#">Ready-02</a></span>
             </p>
             </div>
             <hr style="width:50%" />
@@ -44,12 +42,9 @@
               <hr style="width:50%" />
               <div class="row justify-content-center">
               <div class="col-auto">
-                <p><a class="btn btn-primary btn-lg" href="http://www.jamsg.cn:3/#/s/wasp" role="button">WearOS 软件库-PrDisk</a> </p>
+                <p><button class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#PrDisk">WearOS 软件库</button> </p>
               </div>
-              <div class="col-auto">
-                <p><a class="btn btn-primary btn-lg" href="http://www.jamsg.cn:2/s/fw6mRy9m6Xk3mCg" role="button">WearOS 软件库-Nextcloud</a> </p>
               </div>
-            </div>
 	         <hr>
             <h2><p class="text-center">加入我们?</p></h2>
             <img src="https://jamsg.cn/images/QR.png" alt="" class="img-fluid">
@@ -66,6 +61,71 @@
         </div>
       </div>
     </footer>
+
+<div class="modal fade" id="PrDisk">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- 模态框头部 -->
+      <div class="modal-header">
+        <h4 class="modal-title">选择服务器</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- 模态框主体 -->
+      <div class="modal-body">
+        <h5>如JSG服务器不可用 则使用Github服务器</h5>
+        <h6>Github服务器比JSG服务器慢</h6>
+      </div>
+
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-lg" href="http://www.jamsg.cn:3/#/s/wasp" role="button">PrDisk</a>
+        <a class="btn btn-primary btn-lg" href="http://www.jamsg.cn:2/s/fw6mRy9m6Xk3mCg" role="button">Nextcloud</a>
+        <a class="btn btn-secondary btn-lg" href="https://github.com/JamXi233/JSG-Releases" role="button">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="status">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- 模态框头部 -->
+      <div class="modal-header">
+        <h4 class="modal-title">服务器状态</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- 模态框主体 -->
+      <div class="modal-body">
+        <h5>检测需要一段时间 请稍等...</h5>
+        <hr>
+        <h6>在线状态</h6>
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-Main%E6%9C%8D%E5%8A%A1%E5%99%A8&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A18888" alt="JSG-Main服务器">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-Main&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fjamsg.cn" alt="JSG-Main">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-%E4%B8%BB%E8%8F%9C%E5%8D%95&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fmenu.jamsg.cn" alt="JSG-主菜单">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-Nextcloud&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A2" alt="JSG-Nextcloud">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-PrDisk&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A3" alt="JSG-PrDisk">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-%E4%BA%A4%E6%8D%A2%E4%B8%AD%E5%BF%83&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A81" alt="JSG-交换中心">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-%E9%95%9C%E5%83%8F%E7%AB%99&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A82" alt="JSG-镜像站">
+        <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fupdate.jamsg.cn" alt="JSG-软件中心">
+        <hr>
+        <h6>网站大小</h6>
+        <img src="https://img.shields.io/github/repo-size/JamXi233/JSG-Main?label=JSG-%E4%B8%BB%E9%A1%B5" alt="JSG-主页">
+        <img src="https://img.shields.io/github/repo-size/JamXi233/JSG-MainMenu?label=JSG-%E4%B8%BB%E8%8F%9C%E5%8D%95" alt="JSG-主菜单">
+        <img src="https://img.shields.io/github/repo-size/JamXi233/JSG-Update?label=JSG-%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83" alt="JSG-软件中心">
+      </div>
+
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://jamsg.cn/js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
