@@ -9,8 +9,8 @@
     <!-- Bootstrap -->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.0/css/bootstrap.min.css">
   </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body background="./images/background.png">
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-fixed-top" role="navigation">
       <a class="navbar-brand" href="#">JSG主页</a>
       <img src="https://img.shields.io/hsts/preload/jamsg.cn?label=HSTS%E7%8A%B6%E6%80%81&style=flat-square" alt="">
     </nav>
@@ -25,6 +25,7 @@
             <div>
             <p>
             <span class="badge badge-warning">服务器状态:<a class="badge badge-success" data-toggle="modal" data-target="#status" href="#">Ready-02</a></span>
+            <a class="badge badge-success" data-toggle="modal" data-target="#info" href="#">公告</a>
             </p>
             </div>
             <hr style="width:50%" />
@@ -45,9 +46,9 @@
                 <p><button class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#PrDisk">WearOS 软件库</button> </p>
               </div>
               </div>
-	         <hr>
-            <h2><p class="text-center">加入我们?</p></h2>
-            <img src="https://jamsg.cn/images/QR.png" alt="" class="img-fluid">
+	         <hr style="width:50%">
+            <h2><p class="text-center">加入我们!</p></h2>
+            <p><a class="btn btn-info btn-lg" data-toggle="modal" data-target="#join" href="#">QQ群</a> </p>
           </div>
         </div>
       </div>
@@ -104,6 +105,7 @@
         <img src="https://img.shields.io/badge/Jam-Love%E5%A8%9C-red" alt="">
         <hr>
         <h6>在线状态</h6>
+        <img src="https://img.shields.io/badge/license-Apache-blue?label=%E7%A8%8B%E5%BA%8F">
         <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-Main%E6%9C%8D%E5%8A%A1%E5%99%A8&up_message=%E5%9C%A8%E7%BA%BF&url=http%3A%2F%2Fwww.jamsg.cn%3A18888" alt="JSG-Main服务器">
         <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-Main&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fjamsg.cn" alt="JSG-Main">
         <img src="https://img.shields.io/website?down_message=%E4%B8%8D%E5%9C%A8%E7%BA%BF&label=JSG-%E4%B8%BB%E8%8F%9C%E5%8D%95&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fmenu.jamsg.cn" alt="JSG-主菜单">
@@ -127,9 +129,64 @@
   </div>
 </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<div class="modal fade" id="info">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- 模态框头部 -->
+      <div class="modal-header">
+        <h4 class="modal-title">公告</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- 模态框主体 -->
+      <div class="modal-body">
+        <h5>暂无公告</h5>
+      </div>
+
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <a class="btn btn-success" data-toggle="modal" data-target="#status" data-dismiss="modal" href="#">服务器状态</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="join">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- 模态框头部 -->
+      <div class="modal-header">
+        <h4 class="modal-title">加入我们!</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- 模态框主体 -->
+      <div class="modal-body">
+        <img src="http://www.jamsg.cn:82/JSG%E4%BA%A4%E6%8D%A2%E4%B8%AD%E5%BF%83-%E9%95%9C%E5%83%8F/Other/JSG.jpg" width=468px height=608px>
+        <img src="http://www.jamsg.cn:82/JSG%E4%BA%A4%E6%8D%A2%E4%B8%AD%E5%BF%83-%E9%95%9C%E5%83%8F/Other/O-Range.jpg" width=468px height=608px>
+      </div>
+
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.jumbotron {
+margin-bottom: 0px;
+background-image: url(./images/ground.png);
+background-position: 0% 0%;
+background-size: cover;
+background-repeat: no-repeat;
+color: white;
+}
+</style>
     <script src="https://jamsg.cn/js/jquery-3.2.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://jamsg.cn/js/popper.min.js"></script>
     <script src="https://jamsg.cn/js/bootstrap-4.0.0.js"></script>
   </body>
